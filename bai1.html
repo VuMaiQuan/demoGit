@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="form">
+            <div class="Item">
+                <label for="">Họ và tên*</label>
+                <input type="text" id="HT">
+            </div>
+            <div class="Item">
+                <label for="">Giới tính*</label>
+                <input type="radio" value="nam" id="Nam" name="nam" required>Nam
+                <input type="radio" value="nữ" id="Nu" name="nam" required>Nữ
+            </div>
+            <div class="Item">
+                <label for="">Số điện thoại</label>
+                <input type="text" id="SDT">
+
+            </div>
+            <button type="submit" onclick="return checkDL()">Gửi</button>
+
+
+        </form>
+    </div>
+    <script>
+        function checkDL() {
+            var ValueHT = document.getElementById('HT').value;
+            if (ValueHT.length < 8) {
+                alert('Tối thiểu 8 kí tự');
+            }
+            // var Vnam = document.getElementById('Nam');
+            // console.log(Vnam);
+            // var Vnu = document.getElementById('Nu');
+            // if (Vnam.checked == false && Vnam.checked == false) {
+            //     alert("Phải chọn giới tính");
+            // }
+            var ValueSDT = document.getElementById('SDT').value;
+            if (ValueSDT.length != 10) {
+                alert('Tối thiểu 10 kí tự');
+
+
+            }
+            if (isNaN(ValueSDT)) {
+                alert('Phải nhập số');
+            }
+
+        }
+    </script>
+</body>
+
+</html>
